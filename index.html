@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Daily Gold Rate Maker</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Lexend:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#07240f;--panel:#0c3117;--accent:#e23b3b;--gold:#ffd54a;--text:#f3f5f4;--brand:#688b55;}
+  body{margin:0;font-family:Inter,system-ui,Arial;background:#0b1810;color:#e8ecea;}
+  .wrap{max-width:1100px;margin:auto;padding:16px}
+  h1{font-size:20px;margin:8px 0 12px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .card{background:#0f2217;border:1px solid #122e1c;border-radius:14px;padding:12px}
+  label{font-size:12px;opacity:.9}
+  input,textarea,select{width:100%;padding:10px;margin-top:6px;border-radius:10px;border:1px solid #284e39;background:#0e2016;color:#e8ecea;font-size:14px}
+  button{cursor:pointer;border:0;border-radius:12px;padding:12px 14px;font-weight:700;background:#1b6e43;color:white}
+  .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .row > *{flex:1}
+  .preview{background:#02140a;border-radius:16px;padding:10px;display:flex;justify-content:center;align-items:center;min-height:380px}
+  .sizes button{background:#134f32}
+  small{opacity:.8}
+  .foot{font-size:12px;opacity:.7;margin-top:8px}
+  @media(max-width:860px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Daily Gold Rate Maker</h1>
+    <div class="grid">
+      <div class="card">
+        <div class="row">
+          <div><label>Shop name</label><input id="shopName" value="GOLD HOUSE"></div>
+          <div><label>Tagline</label><input id="tagline" value="GOLD    SILVER"></div>
+        </div>
+        <div class="row">
+          <div><label>Branch 1</label><input id="loc1" value="Vadakara"></div>
+          <div><label>Phone 1</label><input id="ph1" value="9995834916"></div>
+        </div>
+        <div class="row">
+          <div><label>Branch 2</label><input id="loc2" value="Ayancheri"></div>
+          <div><label>Phone 2</label><input id="ph2" value="9400518916"></div>
+        </div>
+        <div class="row">
+          <div><label>22K — 1g (₹)</label><input id="k22_1" value="11995"></div>
+          <div><label>22K — 8g (₹)</label><input id="k22_8" value="95960"></div>
+          <div><label>18K — 1g (₹)</label><input id="k18_1" value="9915"></div>
+        </div>
+        <div class="row">
+          <div><label>Making charge (₹/g)</label><input id="mc" value="175"></div>
+          <div><label>Date</label><input id="date" type="date"></div>
+          <div><label>Color</label><input id="brand" type="color" value="#688b55"></div>
+        </div>
+        <div class="row"><button id="render">Update preview</button></div>
+      </div>
+      <div class="card">
+        <div class="preview" id="preview">Preview here</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
